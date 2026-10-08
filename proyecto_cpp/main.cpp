@@ -52,20 +52,16 @@ int main() {
         return 1;
     }
 
-    int edad = anioA - anioN;
-    
-    if (mesN > mesA)
-    {
-       edad = edad + 1 
-    }else if (mesN = mesA)
-    {
-        if (diaN >= diaA)
-        {
-            edad = edad + 1
-        }
+    if (anioN > anioA || (anioN == anioA && (mesN > mesA || (mesN == mesA && diaN > diaA)))) {
+        cout << "[ERROR] La fecha de nacimiento no puede ser posterior a la fecha actual." << endl;
+        return 1;
     }
-    
-    
+
+    int edad = anioA - anioN;
+
+    if (mesN > mesA || (mesN == mesA && diaN > diaA)) {
+        --edad;
+    }
 
     cout << "\n[SISTEMA] Fecha de hoy: " << diaA << "/" << mesA << "/" << anioA << endl;
     cout << "[SISTEMA] Edad calculada: " << edad << " anos." << endl;
