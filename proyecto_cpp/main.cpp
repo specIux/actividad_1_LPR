@@ -52,7 +52,18 @@ int main() {
         return 1;
     }
 
-
+    int edad = anioA - anioN;
+    
+    if (mesN > mesA)
+    {
+       edad = edad + 1 
+    }else if (mesN = mesA)
+    {
+        if (diaN >= diaA)
+        {
+            edad = edad + 1
+        }
+    }
     
     
 
