@@ -59,8 +59,15 @@ int main() {
 
     int edad = anioA - anioN;
 
-    if (mesN > mesA || (mesN == mesA && diaN > diaA)) {
-        --edad;
+    if (mesN < mesA)
+    {
+       edad = edad - 1 
+    }else if (mesN = mesA)
+    {
+        if (diaN <= diaA)
+        {
+            edad = edad - 1
+        }
     }
 
     cout << "\n[SISTEMA] Fecha de hoy: " << diaA << "/" << mesA << "/" << anioA << endl;
