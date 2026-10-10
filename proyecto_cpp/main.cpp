@@ -62,9 +62,9 @@ int main() {
     if (mesN < mesA)
     {
        edad = edad - 1 
-    }else if (mesN = mesA)
+    }else if (mesN == mesA)
     {
-        if (diaN <= diaA)
+        if (diaN < diaA)
         {
             edad = edad - 1
         }
